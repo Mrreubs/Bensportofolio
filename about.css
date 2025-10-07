@@ -106,7 +106,7 @@
 
 @media (max-width: 480px) {
   .about-me {
-    padding: var(--spacing-large);
+    padding: 1rem;
     background-color: var(--color-lightgray);
     border-radius: var(--border-radius-meduim);
 
