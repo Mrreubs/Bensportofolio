@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="about.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="body">
+      <section class="navigations">
+        <div class="logo">
+          <div class="circle">
+            <img
+              src="./images/Letter_F_logo__Real_company__real_logo__Logos_and_-removebg-preview.png"
+              alt=""
+            />
+          </div>
+          <h2>Reuben.</h2>
+        </div>
+
+        <div class="nav-links">
+          <a href="./index.html"
+            ><span class="material-symbols-outlined">home</span> Home
+          </a>
+
+          <a href="./about.html" class="active"
+            ><span class="material-symbols-outlined">person</span> About</a
+          >
+          <a href="./projects.html"
+            ><span class="material-symbols-outlined">work</span> Projects
+          </a>
+
+          <a href="./contact.html"
+            ><span class="material-symbols-outlined">mail</span> Contact</a
+          >
+        </div>
+
+        <button class="contact">Hire Me</button>
+
+        <div class="hamburger-menu">
+          <span class="material-symbols-outlined menu-icon">menu</span>
+          <span class="material-symbols-outlined close-icon">close</span>
+        </div>
+      </section>
+
+      <div class="mobile-nav-links">
+        <a href="./index.html"
+          ><span class="material-symbols-outlined">home</span> Home
+        </a>
+
+        <a href="./about.html" class="active"
+          ><span class="material-symbols-outlined">person</span> About</a
+        >
+        <a href="./projects.html"
+          ><span class="material-symbols-outlined">work</span> Projects
+        </a>
+
+        <a href="./contact.html"
+          ><span class="material-symbols-outlined">mail</span> Contact</a
+        >
+      </div>
+
+      <section class="about-me">
+        <div class="about-me-content">
+          <h1>About Me</h1>
+          <p>
+            I am a passionate and dedicated frontend developer with a knack for
+            creating visually stunning and user-friendly websites. With a strong
+            foundation in HTML, CSS, JavaScript, React and Next,js , I bring
+            ideas to life on the web. I thrive on challenges and constantly seek
+            to expand my skillset to stay at the forefront of web development
+            trends.
+          </p>
+          <p>
+            My journey into web development began with a fascination for design
+            and technology. I love the process of transforming concepts into
+            functional and aesthetically pleasing digital experiences. Whether
+            it's crafting responsive layouts, optimizing performance, or
+            implementing interactive features, I approach each project with
+            enthusiasm and attention to detail.
+          </p>
+
+          <p>
+            Beyond coding, I am a strong advocate for collaboration and
+            continuous learning. I enjoy working in dynamic teams where ideas
+            flow freely, and innovation is encouraged. I am always eager to take
+            on new challenges and contribute my skills to create impactful web
+            solutions.
+          </p>
+        </div>
+        <div class="about-me-image">
+          <img src="./images/IMG_0783-removebg-preview.png" alt="image" />
+        </div>
+      </section>
+
+      <section class="my-skills">
+        <h2>My Skills</h2>
+        <div class="skills-container">
+          <div class="skill">
+            <div class="skill-icon">
+              <img
+                src="./images/e64ce0bd-666c-474e-8917-51c3f7443a6a-removebg-preview.png"
+                alt=""
+              />
+            </div>
+            <p>HTML5</p>
+          </div>
+          <div class="skill">
+            <div class="skill-icon">
+              <img
+                src="./images/f98ee0f5-13c4-4cc6-8ade-6dc625bb6f5d-removebg-preview.png"
+                alt=""
+              />
+            </div>
+            <p>CSS3</p>
+          </div>
+          <div class="skill">
+            <div class="skill-icon">
+              <img
+                src="./images/977b36f2-84a3-4ecb-9794-14c9a71fb585-removebg-preview.png"
+                alt=""
+              />
+            </div>
+            <p>JavaScript</p>
+          </div>
+          <div class="skill">
+            <div class="skill-icon">
+              <img
+                src="./images/0873d6b5-6b27-4c57-85a4-14cd99980350-removebg-preview.png"
+                alt=""
+              />
+            </div>
+            <p>React</p>
+          </div>
+          <div class="skill">
+            <div class="skill-icon">
+              <img
+                src="./images/Typescript_01_Icon___Solid___Standard___Download_-removebg-preview.png"
+                alt=""
+              />
+            </div>
+            <p>TypeScript</p>
+          </div>
+          <div class="skill">
+            <div class="skill-icon">
+              <img src="./images/next-removebg-preview.png" alt="" />
+            </div>
+            <p>Next.js</p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer-content">
+          <h2>Get in Touch</h2>
+          <div class="social-links">
+            <a href="#"><span class="material-symbols-outlined">mail</span></a>
+            <a href="#"
+              ><span class="material-symbols-outlined">camera</span></a
+            >
+            <a href="#"
+              ><span class="material-symbols-outlined">photo_camera</span></a
+            >
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2025 Reuben Shokunbi. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      const hamburgerMenu = document.querySelector(".hamburger-menu");
+      const mobileNavLinks = document.querySelector(".mobile-nav-links");
+      const menuIcon = document.querySelector(".menu-icon");
+      const closeIcon = document.querySelector(".close-icon");
+
+      hamburgerMenu.addEventListener("click", () => {
+        mobileNavLinks.classList.toggle("active");
+        menuIcon.style.display =
+          menuIcon.style.display === "none" ? "block" : "none";
+        closeIcon.style.display =
+          closeIcon.style.display === "block" ? "none" : "block";
+      });
+    </script>
+  </body>
+</html>

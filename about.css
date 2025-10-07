@@ -1,0 +1,160 @@
+@import url("./style.css");
+
+.about-me {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-xxlarge) 0;
+  margin: 1rem auto;
+  padding: var();
+}
+
+.about-me-content {
+  width: 100%;
+  padding: 2rem;
+}
+
+.about-me-content p {
+  font-size: var(--font-size-medium);
+  line-height: 1.6;
+  color: black;
+  margin-bottom: var(--spacing-medium);
+}
+
+.about-me-content h1 {
+  font-size: var(--font-size-xxlarge);
+  margin-bottom: var(--spacing-medium);
+}
+
+.about-me-content p {
+  text-align: justify;
+}
+
+.about-me-image {
+  width: 50%;
+}
+
+.about-me-image img {
+  width: 100%;
+  transform: scaleX(-1);
+  border-radius: var(--border-radius-meduim);
+  box-shadow: var(--shadow-md);
+}
+
+.my-skills {
+  padding: var(--spacing-xxlarge) 0;
+  background-color: var(--color-offwhite);
+}
+
+.my-skills h2 {
+  font-size: var(--font-size-xlarge);
+  text-align: center;
+  margin-bottom: var(--spacing-large);
+}
+
+.skills-container {
+  width: 70%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--spacing-large);
+}
+
+.skill {
+  text-align: center;
+}
+
+.skill-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto var(--spacing-small);
+  background-color: var(--color-lightgray);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.skill-icon img {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .about-me {
+    flex-direction: column;
+    padding: 4rem;
+  }
+
+  .about-me-content {
+    width: 90%;
+    padding: 5rem;
+    margin-bottom: var(--spacing-large);
+    text-align: center;
+  }
+
+  .about-me-image {
+    width: 80%;
+  }
+
+  .skills-container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-me {
+    padding: var(--spacing-large);
+    background-color: var(--color-lightgray);
+    border-radius: var(--border-radius-meduim);
+
+    box-shadow: var(--shadow-md);
+  }
+
+  .about-me-content {
+    width: 100%;
+    padding: 0;
+  }
+
+  .about-me-content h1 {
+    font-size: var(--font-size-xlarge);
+  }
+
+  .about-me-content p {
+    font-size: var(--font-size-small);
+  }
+
+  .about-me-image {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .my-skills {
+    padding: var(--spacing-large);
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-meduim);
+    margin: var(--spacing-medium);
+    box-shadow: var(--shadow-md);
+  }
+
+  .my-skills h2 {
+    font-size: var(--font-size-large);
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-medium);
+  }
+
+  .skill-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: var(--border-radius-small);
+  }
+
+  .skill p {
+    font-size: var(--font-size-small);
+  }
+}

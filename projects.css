@@ -1,0 +1,113 @@
+.projects {
+  padding: var(--spacing-xxlarge) 0;
+  text-align: center;
+}
+
+.projects h1 {
+  font-size: var(--font-size-xxlarge);
+  margin-bottom: var(--spacing-large);
+}
+
+.project-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-large); /* Flexbox now supports gap */
+  width: 70%;
+  margin: 0 auto;
+  background-color: var(--color-offwhite);
+  padding: var(--spacing-large);
+}
+
+.project-item {
+  background-color: var(--color-offwhite);
+  border-radius: var(--border-radius-meduim);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-medium);
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  position: relative;
+  flex: 1 1 250px; /* Allow items to grow, shrink, and have a base width of 250px */
+  max-width: calc(
+    33.333% - var(--spacing-large) * 2 / 3
+  ); /* Approximately 3 columns with gap */
+}
+
+.project-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.project-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--border-radius-small);
+  margin-bottom: var(--spacing-medium);
+  transition: all 0.3s ease-in-out;
+}
+
+.project-item:hover img {
+  filter: brightness(0.5);
+}
+
+.project-description {
+  font-size: var(--font-size-small);
+  color: white;
+  margin-top: var(--spacing-small);
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--spacing-small);
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.project-item:hover .project-description {
+  opacity: 1;
+}
+
+/* Media queries for responsiveness with flexbox */
+@media (max-width: 1024px) {
+  /* Adjust for larger screens to maintain 3 columns */
+  .project-item {
+    max-width: calc(50% - var(--spacing-large) / 2); /* Two columns */
+  }
+}
+
+@media (max-width: 768px) {
+  .project-gallery {
+    width: 90%;
+  }
+
+  .project-item {
+    flex: 1 1 200px; /* Adjust base width for smaller screens */
+    max-width: calc(50% - var(--spacing-large) / 2); /* Two columns */
+  }
+}
+
+@media (max-width: 480px) {
+  .projects h1 {
+    font-size: var(--font-size-xlarge);
+  }
+
+  .project-gallery {
+    width: 90%;
+    gap: var(--spacing-medium);
+  }
+
+  .project-item {
+    flex: 1 1 100%; /* Single column layout */
+    max-width: 100%;
+    padding: var(--spacing-small);
+  }
+
+  .project-item img {
+    height: 150px;
+    border-radius: var(--border-radius-small);
+  }
+}
